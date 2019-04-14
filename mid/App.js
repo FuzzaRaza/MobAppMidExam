@@ -8,10 +8,6 @@
 
 import React, {Component} from 'react';
 import {Platform, StyleSheet, Text, View} from 'react-native';
-import {Header} from './Header';
-import {Footer} from './Footer';
-import {AccordExample} from './AccordExample';
-import { Footer } from 'native-base';
 
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
@@ -20,16 +16,14 @@ const instructions = Platform.select({
     'Shake or press menu button for dev menu',
 });
 
-
-export default class App extends Component  {
+type Props = {};
+export default class App extends Component<Props> {
   render() {
     return (
       <View style={styles.container}>
         <Text style={styles.welcome}>Welcome to React Native!</Text>
         <Text style={styles.instructions}>To get started, edit App.js</Text>
         <Text style={styles.instructions}>{instructions}</Text>
-        <Header/>
-        <Footer/>
       </View>
     );
   }
